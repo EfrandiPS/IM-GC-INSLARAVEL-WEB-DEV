@@ -1,0 +1,2 @@
+Motivasi saya mengikuti latihan Laravel :
+Saya mengikuti latihan Laravel karena ingin memperdalam keterampilan dalam pengembangan web menggunakan framework modern yang efisien. Laravel menawarkan banyak fitur yang memudahkan pengembangan aplikasi, seperti routing, ORM, dan keamanan yang kuat, sehingga dapat mempercepat proses pembuatan aplikasi yang kompleks.
