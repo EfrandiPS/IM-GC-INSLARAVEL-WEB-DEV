@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping pada Array</title>
+</head>
+<body>
+    <h1>SOAL NO. 1 LOOPING PADA ARRAY</h1>
+    <div id="jawaban1"></div>
+
+    <script>
+        var input = [
+            ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"],
+            ["0002", "Dika Sembiring", "Medan", "10/10/1992", "Bermain Gitar"],
+            ["0003", "Winona", "Ambon", "25/12/1965", "Memasak"],
+            ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
+        ];
+
+        function dataHandling(arr) {
+            var jawaban = "";
+
+            for (var i = 0; i < arr.length; i++) {
+                var id = arr[i][0];
+                var nama = arr[i][1];
+                var ttl = arr[i][2] + " " + arr[i][3]; 
+                var hobi = arr[i][4];
+
+
+                jawaban += "Nomor ID: " + id + "<br>" +
+                           "Nama Lengkap: " + nama + "<br>" +
+                           "TTL: " + ttl + "<br>" +
+                           "Hobi: " + hobi + "<br><br>"; 
+            }
+            
+            return jawaban; 
+        }
+        var jawaban1 = dataHandling(input);
+        document.getElementById("jawaban1").innerHTML = jawaban1;
+    </script>
+</body>
+</html>

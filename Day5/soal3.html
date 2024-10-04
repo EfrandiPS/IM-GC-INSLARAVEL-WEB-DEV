@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditional HTML</title>
+</head>
+<body>
+<h1>Berlatih Kondisional</h1>
+<h3>Masukkan nama dan peranmu!</h3>
+
+<form action="#" id="formConditional">
+    <input type="text" id="name" placeholder="Isi nama di sini">
+    <input type="text" id="role" placeholder="Isi peran di sini">
+    <input type="submit" value="Mulai Permainan">
+</form>
+
+<h3>Jawaban dari console game: </h3>
+<div id="jawaban"></div>
+
+<script>
+ 
+    var form = document.getElementById("formConditional");
+    var jawaban = document.getElementById("jawaban");
+
+    form.addEventListener("submit", function(e) {
+
+
+        var name = document.getElementById("name").value;
+        var role = document.getElementById("role").value;
+
+
+        var jawabanKonsol = "";
+
+        if (name === "") {
+            jawabanKonsol = "Nama harus diisi!";
+        } else if (role === "") {
+            jawabanKonsol = "Halo " + name + ", Pilih peranmu untuk memulai game!";
+        } else if (role.toLowerCase() === "penyihir") {
+            jawabanKonsol = "Selamat datang di Dunia Werewolf, " + name + "<br>" +
+                            "Halo Penyihir " + name + ", kamu dapat melihat siapa yang menjadi Werewolf!";
+        } else if (role.toLowerCase() === "werewolf") {
+            jawabanKonsol = "Selamat datang di Dunia Werewolf, " + name + "<br>" +
+                            "Halo Werewolf " + name + ", kamu dapat memilih siapa yang akan kamu makan malam ini!";
+        } else if (role.toLowerCase() === "rakjel") {
+            jawabanKonsol = "Selamat datang di Dunia Werewolf, " + name + "<br>" +
+                            "Halo Rakjel " + name + ", Kamu menjadi rakyat jelata!";
+        } else {
+            jawabanKonsol = "Halo " + name + ", peran " + role + " tidak dikenali!";
+        }
+
+        jawaban.innerHTML = jawabanKonsol;
+    });
+</script>
+
+</body>
+</html>
