@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Looping</title>
+</head>
+<body>
+<h1>Berlatih Looping</h1>
+<h3>Contoh Hasil Looping</h3>
+<div id="example">
+</div>
+<h3>Soal No. 1</h3>
+<div id="jawaban1">
+</div>
+<script>
+    var jawabanContoh = ""
+// Contoh untuk melakukan looping dengan for var jawabanContoh = ""
+for (var i = 0; i < 5; i++) {
+jawabanContoh += "ini adalah angka ke: " + [i] + "<br>" }
+// Driver Code
+document.getElementById("example").innerHTML = jawabanContoh
+var jawaban1 = "";
+var i = 2;
+jawaban1 += "LOOPING PERTAMA<br>";
+while (i <= 20) {
+    jawaban1 += i + " - I love coding<br>";
+    i += 2;
+}
+i = 20;
+jawaban1 += "<br>LOOPING KEDUA<br>";
+while (i >= 2) {
+    jawaban1 += i + " - I will become web developer<br>";
+    i -= 2; 
+}
+document.getElementById("jawaban1").innerHTML = jawaban1 </script>
+</body>
+</html>
